@@ -2,6 +2,8 @@
 
 Analysis and implementation of the most popular [sort algorithms](https://en.wikipedia.org/wiki/Sorting_algorithm) in Vanilla HTML5/CSS and TypeScript.
 
+[Link to demo](https://sort-analysis.netlify.app/)
+
 ## Description
 
 Steps for running a simulation:

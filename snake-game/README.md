@@ -1,6 +1,10 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e71cfb35-445d-40a3-a6d0-13b9dba74383/deploy-status)](https://app.netlify.com/sites/snake-game-lab/deploys)
+
 # Snake Game
 
 This is an implementation of the [Snake game](<https://en.wikipedia.org/wiki/Snake_(video_game_genre)>) in Vanilla HTML5/CSS and TypeScript.
+
+[Link to demo](https://snake-game-lab.netlify.app/)
 
 ## Description
 
