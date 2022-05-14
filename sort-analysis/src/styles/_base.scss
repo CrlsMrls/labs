@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: $font-size;
+    font-family: $font-family;
+    background: $background-color;
+    color: $primary-color;
+    max-width: $page-width;
+    line-height: 1.4;
+}
+
+:root {
+    // TODO REMOVE
+    --square-size: 40px;
+    --mdc-theme-primary: #{$primary-color};
+    --mdc-theme-secondary: #{$secondary-color};
+}
+
+mwc-button {
+    --mdc-theme-primary: #{$secondary-color};
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: $background-color;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: $background-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border: 2px solid #555555;
+}
+
+main {
+    // background-color: darkslateblue;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(300px, 100vw);
+    grid-template-rows: 200px minmax(500px, calc(90vh - 200px)) 600px;
+    padding-top: 20px;
+}
+
+.simulation {
+    // mobile is just one row
+    grid-row: 3;
+
+    & .controls {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+
+        & > div {
+            margin-left: 20px;
+        }
+    }
+
+    & canvas {
+        height: 90%;
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 700px) {
+    main {
+        grid-template-columns: 300px calc(100vw - 300px);
+        grid-template-rows: 200px minmax(500px, calc(90vh - 200px));
+    }
+    .simulation {
+        grid-column: 2 / span 2;
+        grid-row: 1 / span 2;
+
+        & .controls {
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        & canvas {
+            max-height: calc(100vh - 250px);
+        }
+    }
+}
+
+.card__content.data {
+    display: flex;
+    flex-flow: column;
+
+    & mwc-button {
+        margin: 10px;
+    }
+}
+
+.settings-dialog__option {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    & > mwc-textfield {
+        width: 100%;
+    }
+}
+
+.info-dialog__text > p {
+    margin: 10px;
+}
+
+.algorithms > .card__content {
+    overflow-y: auto;
+    height: 100%;
+    margin-top: 25px;
+
+    & .algorithm__result {
+        border: 1px #eee solid;
+        padding: 10px;
+
+        & > h3 {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+
+        &__content {
+            display: flex;
+            flex-flow: wrap;
+            flex-flow: column;
+            height: 70px;
+            justify-content: space-between;
+        }
+    }
+}

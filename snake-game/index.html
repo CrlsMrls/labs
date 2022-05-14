@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="src/snake-favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+  </head>
+  <body>
+    <section id="board">
+      <div class="head">
+        <div class="eye left-eye"></div>
+        <div class="eye right-eye"></div>
+      </div>
+    </section>
+    <aside>
+      <button id="open-config" class="cog">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M34.921 19.6605C34.921 19.1138 35 18.5569 35 18C35 17.4431 35 16.8862 34.921 16.3395L31.5822 14.4157C31.4371 13.8385 31.259 13.2705 31.0488 12.7147L32.6293 9.16081C32.0775 8.20384 31.4392 7.30212 30.7228 6.46754L26.9494 6.91304C26.4938 6.54426 26.0154 6.20606 25.5171 5.90054L24.7664 2.06313C23.7745 1.62154 22.7421 1.28236 21.6845 1.05063L18.8693 3.70339C18.5828 3.70339 18.2963 3.70339 18 3.70339C17.7037 3.70339 17.4172 3.70339 17.1307 3.70339L14.3155 1C13.2579 1.23173 12.2255 1.57091 11.2336 2.01251L10.4829 5.84991C9.98464 6.15543 9.50621 6.49364 9.05055 6.86242L5.27716 6.41692C4.5608 7.2515 3.92252 8.15321 3.37071 9.11018L4.95119 12.6641C4.74098 13.2199 4.56286 13.7879 4.41778 14.3651L1.07902 16.2889C1.07902 16.8356 1 17.3925 1 17.9494C1 18.5063 1 19.0631 1.07902 19.6099L4.41778 21.5336C4.56286 22.1109 4.74098 22.6789 4.95119 23.2347L3.37071 26.7886C3.92252 27.7455 4.5608 28.6473 5.27716 29.4818L9.05055 29.1376C9.50621 29.5064 9.98464 29.8446 10.4829 30.1501L11.2336 33.9875C12.2255 34.4291 13.2579 34.7683 14.3155 35L17.1307 32.3472C17.4172 32.3472 17.7037 32.3472 18 32.3472C18.2963 32.3472 18.5828 32.3472 18.8693 32.3472L21.6845 35C22.7421 34.7683 23.7745 34.4291 24.7664 33.9875L25.5171 30.1501C26.0154 29.8446 26.4938 29.5064 26.9494 29.1376L30.7228 29.5831C31.4392 28.7485 32.0775 27.8468 32.6293 26.8898L31.0488 23.3359C31.259 22.7801 31.4371 22.2121 31.5822 21.6349L34.921 19.6605ZM18 26.2216C16.4136 26.2216 14.8629 25.7394 13.5438 24.836C12.2248 23.9326 11.1967 22.6485 10.5896 21.1463C9.98255 19.644 9.82371 17.9909 10.1332 16.3961C10.4427 14.8012 11.2066 13.3363 12.3284 12.1865C13.4501 11.0367 14.8793 10.2536 16.4352 9.93641C17.9911 9.61918 19.6038 9.782 21.0695 10.4043C22.5351 11.0265 23.7878 12.0803 24.6692 13.4323C25.5505 14.7844 26.0209 16.3739 26.0209 18C26.0222 19.08 25.8156 20.1497 25.413 21.1478C25.0104 22.1459 24.4196 23.0528 23.6745 23.8165C22.9295 24.5802 22.0447 25.1857 21.071 25.5984C20.0973 26.0111 19.0537 26.2229 18 26.2216Z"
+            fill="#E8EAED"
+            stroke="#202124"
+            stroke-width="2"
+            stroke-miterlimit="10"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+      </button>
+
+      <button>
+        <a href="https://github.com/crlsmrls/" target="_blank">
+          <img src="src/github.svg" alt="github" />
+        </a>
+      </button>
+    </aside>
+
+    <dialog id="restart-dialog">
+      <form method="dialog">
+        <p>Game Over!</p>
+        <button id="restart">Restart</button>
+      </form>
+    </dialog>
+
+    <dialog id="config-dialog">
+      <form method="dialog">
+        <div>
+          <label for="config-size">Board size: </label>
+          <input id="config-size" type="number" min="10" max="500" value="20" />
+        </div>
+        <div>
+          <label for="config-speed">Initial speed: </label>
+          <select id="config-speed">
+            <option value="very-slow">Very slow</option>
+            <option value="slow">Slow</option>
+            <option value="normal">Normal</option>
+            <option value="fast">Fast</option>
+            <option value="very-fast">Very fast</option>
+          </select>
+        </div>
+        <div>
+          <button value="cancel">Cancel</button>
+          <button value="default" id="update-config">Update</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

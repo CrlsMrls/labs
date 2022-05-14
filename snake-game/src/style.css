@@ -1,0 +1,124 @@
+body {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  margin: 0;
+  font-family: monospace;
+}
+
+section#board {
+  display: grid;
+  width: calc(100vmin - 20px);
+  height: calc(100vmin - 20px);
+  margin: 10px;
+  grid-template-columns: repeat(51, 1fr);
+  grid-template-rows: repeat(51, 1fr);
+  background-color: #adff2f42;
+  border-radius: 16px;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+}
+
+div.snake {
+  background-color: greenyellow;
+  border: 0.25vmin darkolivegreen solid;
+}
+
+div.food {
+  background-color: burlywood;
+  border: 0.25vmin darkgoldenrod solid;
+}
+
+div.head {
+  background-color: greenyellow;
+  border: 0.25vmin darkolivegreen solid;
+  position: relative;
+}
+
+div.eye {
+  background: darkslategrey;
+  position: absolute;
+}
+
+dialog {
+  padding: 50px;
+  border-radius: 16px;
+  border: solid 2px;
+}
+
+dialog#restart-dialog {
+  background-color: rgb(236, 94, 79);
+}
+
+dialog p {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: x-large;
+}
+
+dialog button {
+  margin: 10px;
+  margin: 10px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 2px solid rgb(32, 33, 36);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  color: rgb(32, 33, 36);
+  background-color: #f6bd41;
+  cursor: pointer;
+}
+
+dialog button:focus {
+  background-color: #f6bd41b8;
+  box-shadow: rgb(255 255 255) 0px 0px 0px 2px inset;
+}
+
+aside {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+aside button {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(189, 193, 198);
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+
+aside button.cog svg {
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+
+aside button img {
+  height: 38px;
+  width: 38px;
+}
+
+select,
+input {
+  margin: 20px;
+  padding: 10px;
+  font-size: large;
+  font-family: inherit;
+  border-radius: 16px;
+  border-width: 2px;
+}
