@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c9d78619-b8da-40c7-b316-012173afd6c7/deploy-status)](https://app.netlify.com/sites/sort-analysis/deploys)
+
 # Analysis of sort algorithms
 
 Analysis and implementation of the most popular [sort algorithms](https://en.wikipedia.org/wiki/Sorting_algorithm) in Vanilla HTML5/CSS and TypeScript.

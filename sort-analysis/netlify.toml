@@ -14,8 +14,8 @@
   command = "yarn && yarn build"
 
 [build.environment]
-  NODE_VERSION = 14.17.0
-  YARN_VERSION = 1.22.18
+  NODE_VERSION = "14.17.0"
+  YARN_VERSION = "1.22.18"
 
 
   
