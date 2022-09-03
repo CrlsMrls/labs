@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tensorflow Object detection</title>
+    </head>
+    <body>
+        <article>
+            <h1>Object detection</h1>
+            <p>
+                Multiple object detection in
+                <a href="https://www.tensorflow.org/js">TensorFlow.js</a> using a pre-trained model
+            </p>
+
+            <section id="waiting">
+                <p>Wait for the model to load (seconds) ...</p>
+                <div class="loader"></div>
+            </section>
+
+            <section id="demos" class="hidden">
+                <p>
+                    Turn on the webcam and hold some objects up to get a real-time classification!
+                </p>
+                <button id="webcamButton">Enable Webcam</button>
+                <!-- <button id="stopButton">Stop</button> -->
+
+                <div id="liveView" class="camView">
+                    <video id="webcam" autoplay muted width="640" height="480"></video>
+                    <div id="liveViewBoxes"></div>
+                </div>
+            </section>
+        </article>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
